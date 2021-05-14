@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './dummy_data.dart';
-import './categoryItem.dart';
+import '../data/dummy_data.dart';
+import '../widgets/categoryItem.dart';
 
 class CategoriesScreen extends StatelessWidget {
   @override
@@ -10,7 +10,7 @@ class CategoriesScreen extends StatelessWidget {
         title: Text("Meal App"),
       ),
       body: GridView(
-        padding: EdgeInsets.all(10),
+        padding: EdgeInsets.all(20),
         children: DUMMY_CATEGORIES
             .map(
               (myCategory) => CategoryItem(
