@@ -20,7 +20,7 @@ class MealItem extends StatelessWidget {
     @required this.title,
   });
 
-  String get ComplexityText {
+  String get complexityText {
     switch (complexity) {
       case Complexity.Simple:
         return 'Simple';
@@ -36,7 +36,7 @@ class MealItem extends StatelessWidget {
     }
   }
 
-  String get AffordabilityText {
+  String get afordabilityText {
     switch (affordability) {
       case Affordability.Affordable:
         return 'Affordable';
@@ -127,7 +127,7 @@ class MealItem extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Text(ComplexityText)
+                      Text(complexityText)
                     ],
                   ),
                   Row(
@@ -138,7 +138,7 @@ class MealItem extends StatelessWidget {
                       SizedBox(
                         width: 5,
                       ),
-                      Text(AffordabilityText)
+                      Text(afordabilityText)
                     ],
                   ),
                 ],
