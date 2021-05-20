@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import '../screens/filterScreen.dart';
 
 class DrawerPage extends StatelessWidget {
-  Widget buildListTile(IconData icon, String title) {
+  Widget buildListTile(IconData icon, String title, Function tapHandler) {
     return ListTile(
-      onTap: () {},
+      onTap: tapHandler,
       leading: Icon(icon),
       title: Text(
         title,
@@ -32,8 +33,20 @@ class DrawerPage extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          buildListTile(Icons.restaurant, 'Meals'),
-          buildListTile(Icons.settings, "Filters"),
+          buildListTile(
+            Icons.restaurant,
+            'Meals',
+            () {
+              Navigator.pushNamed(context, '/');
+            },
+          ),
+          buildListTile(
+            Icons.settings,
+            "Filters",
+            () {
+              Navigator.pushNamed(context, FilterScreen.routeName);
+            },
+          ),
         ],
       ),
     );
