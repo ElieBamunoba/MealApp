@@ -37,14 +37,14 @@ class DrawerPage extends StatelessWidget {
             Icons.restaurant,
             'Meals',
             () {
-              Navigator.pushNamed(context, '/');
+              Navigator.pushReplacementNamed(context, '/');
             },
           ),
           buildListTile(
             Icons.settings,
             "Filters",
             () {
-              Navigator.pushNamed(context, FilterScreen.routeName);
+              Navigator.pushReplacementNamed(context, FilterScreen.routeName);
             },
           ),
         ],
